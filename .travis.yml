@@ -4,3 +4,6 @@ services:
 
 before_install:
   - docker build -t johnlorac/docker-react -f Dockerfile.dev .
+
+script:
+  - docker run johnlorac/docker-react npm run test -- --coverage
